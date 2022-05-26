@@ -1,6 +1,6 @@
 resource "google_compute_instance" "default" {
   name         = "placeholder-vm"
-  machine_type = var.instance_type  #to be changed or included in var.tf file
+  machine_type = var.gcp_instance_type  #to be changed or included in var.tf file
   zone         = var.gcp_zone
   tags         = ["ssh"]
 
@@ -18,7 +18,8 @@ resource "google_compute_instance" "default" {
         #ephemeral external IP
         }
     }
-}   
+}
+
 
 # Allow http
 resource "google_compute_firewall" "allow-http" {

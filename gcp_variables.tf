@@ -19,8 +19,8 @@ variable "gcp_project" {
   description = "GCP project name"
 }
 
-#public IP of instance
-variable "public_ip" {
+# define GCP region
+variable "gcp_instance_type" {
   type        = string
-  description = "Public IP address"
+  description = "GCP machine type"
 }

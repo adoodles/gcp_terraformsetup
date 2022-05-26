@@ -1,13 +1,11 @@
-resource "google_compute_instance" "default" {
-    boot_disk{
-        source = var.instance_name
-    }
+resource "null_resource" "default" {
     provisioner "file" {
         source = "curl.sh"
         destination = "curl.sh"
         connection {
             type = "ssh"
-            user = "ubuntu"
+            user = "root"
+            host = var.public_ip
         }
     }
 
@@ -19,8 +17,8 @@ resource "google_compute_instance" "default" {
         ]
         connection {
             type = "ssh"
-            user = "ubuntu"
-            private_key = "${file("~/.ssh/google_compute_engine")}"
+            user = "root"
+            host = var.public_ip
         }
     }
 }

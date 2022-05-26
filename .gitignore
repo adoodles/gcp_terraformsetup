@@ -1,3 +1,5 @@
 #ignore terraform
 .terraform
 .terraform.*
+gcpkey
+terraform.*

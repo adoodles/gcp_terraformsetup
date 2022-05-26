@@ -1,6 +1,6 @@
 # GCP Settings
-gcp_project   = "placeholder"
-gcp_region    = "us-west4"
-gcp_zone      = "us-west4-b"
-gcp_auth_file = "../location/of-gcloud.json"
-gcp_instance_type = "f1"
+gcp_project   = "testprojectmay2022terra"
+gcp_region    = "us-west2"
+gcp_zone      = "us-west2-b"
+gcp_auth_file = "./gcpkey/testprojectmay2022terra-03b392ee984a.json"
+gcp_instance_type = "e2-standard-2"
