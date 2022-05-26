@@ -1,5 +1,5 @@
 resource "null_resource" "default" {
-    provisioner "file" {
+    provisioner "local-exec" {
         source = "curl.sh"
         destination = "curl.sh"
         connection {
@@ -11,9 +11,9 @@ resource "null_resource" "default" {
 
     provisioner "remote-exec" {
         inline = [
-          "chmod +x ~/rstudio_2022022-485.sh",
+          "chmod +x ~/curl.sh",
           "cd ~",
-          "./rstudio_2022022-485.sh"
+          "./curl.sh"
         ]
         connection {
             type = "ssh"
